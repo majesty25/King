@@ -232,7 +232,7 @@ $res = $conn->query($sql1);
 
 
         <div>
-            <a href="Homepage.php"><img id="logo" src="font/1622072964755.png" alt="" srcset=""></a>
+            <a href="Homepage.php"><img id="logo" src="https://i.imgur.com/1OJp6hB.png" alt="" srcset=""></a>
         </div>
         <!-- <div id="searchLargeScreen"> -->
 
