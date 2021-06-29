@@ -2,11 +2,11 @@
 
 session_start();
 
-$servername = "localhost";
-$username = "Majesty";
-$password = "JOE892550.bitcoin";
-$dbname = "majesty_store";
-
+// $servername = "localhost";
+// $username = "Majesty";
+// $password = "JOE892550.bitcoin";
+// $dbname = "majesty_store";
+include('config.php');
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
