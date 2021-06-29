@@ -1,0 +1,357 @@
+body{
+    background-color: rgb(245, 241, 255);
+    /* text-align: center; */
+}
+.space{
+    width: 100%;
+    height: 20px;
+}
+
+#cart-Num{
+    text-align: center;
+    font-size: 25px;
+    /* margin-left: 15%; */
+    font-weight: bold;
+}
+
+.checkout{
+    width: 70%;
+    height: 70px;
+    background-color: white;
+    margin-left: 15%;
+    margin-top: 10px;
+}
+
+#prepaid{
+    float: left;
+    width: 40%;
+    text-align: left;
+    padding: 20px;
+    color: red;
+}
+
+#total{
+    float: left;
+    width:30%;
+    font-weight: bolder;
+    text-align: left;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+#checkout{
+    float: left;
+    width: 30%;
+    text-align: left;
+    /* padding: 20px; */
+    color: red;
+}
+
+#checkout-button{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255, 0, 90);
+    border: none;
+    color: white;
+    font-size: 23px;
+}
+
+.Detail-Container{
+    float: left;
+    width: 90%;
+    height: auto;
+    background-color: white;
+    margin-top: 20px;
+}
+
+select{
+    width: 60px;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+.order-Id{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(211, 211, 235);
+    padding: 5px;
+}
+
+#order-Id{
+    float: left;
+}
+
+#date{
+    float: right;
+}
+
+#size{
+    float: left;
+    margin-left: 20px;
+}
+
+#Qty{
+    float: left;
+}
+
+.cart{
+    /* position: absolute; */
+    /* bottom: 0px; */
+    width: 70%;
+    height: auto;
+    background-color: white;
+    box-shadow: 1px 2px 2px silver;
+    margin-top: 10px;  
+    margin-left: 15%; 
+    /* margin-bottom: 30px; */
+}
+
+.cart:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#Picture{
+    text-align: center;
+    /* padding: 20px; */
+    float: left;
+    width: 20%;
+    height: 100%;
+    /* background-color: blue; */
+    border-right: 1px solid lightgray;
+}
+
+.Picture{
+    width: 70%;
+    height: 100%;
+}
+
+#Name{
+    padding: 10px;
+    float: left;
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid whitesmoke;
+    /* background-color: rgb(255, 38, 0); */
+}
+
+#link{
+    float: right;
+    color: crimson;
+}
+
+#Small-Remove{
+    /* float: right; */
+    color: rgb(255, 0, 34);
+    margin-right: 10%;
+    font-size: 21px;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    
+    background-color: whitesmoke;
+}
+
+#Price{
+    float: left;
+    text-align: center;
+    width: 22%;
+    height: 100%;
+    padding-top: 40px;
+    /* background-color: blue; */
+    border-right: 1px solid whitesmoke;
+}
+
+#Quantity{
+    float: left;
+    text-align: center;
+    padding-top: 40px;
+    width: 17%;
+    height: 100%;
+    border-right: 1px solid whitesmoke;
+    /* background-color: rgb(208, 255, 0); */
+}
+
+#Status{
+    float: left;
+    width: 30%;
+     height: 100%;
+     text-align: center;
+     padding-top: 40px;
+     /* border-right: 1px solid rgb(182, 175, 175); */
+    /* background-color: rgb(255, 0, 170); */
+}
+
+@media screen and (min-width: 800px) {
+    #small-price{
+        display: none;
+    }
+
+    #Name{
+        line-height: 39px;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 1180px) {
+    .cart{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /* #Status{
+        width: 15%;
+    } */
+
+    /* #Name{
+        width: 30%;
+    } */
+
+    /* #small-price{
+        display: none;
+    } */
+    #Price{
+        width: 20%;
+    }
+
+    /* #Picture{
+        width: 18%;
+    } */
+
+    .Picture{
+        width: 70%;
+    }
+
+    .checkout{
+        position: fixed;
+        width: 80%;
+        bottom: 0%;
+        margin-left: 10%;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .cart{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /* #Status{
+        width: 15%;
+    }
+
+    #Name{
+        width: 30%;
+    }
+
+    /* #small-price{
+        display: none;
+    } */
+    /* #Price{
+        width: 20%;
+    } */
+
+    /* #Picture{
+        width: 18%;
+ */
+
+    .Picture{
+        width: 80%;
+    }
+
+    .checkout{
+        position: fixed;
+        width: 80%;
+        bottom: 0%;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cart{
+        width: 100%;
+        margin-left: 0%;
+    }
+    #Status{
+        width: 100%;
+        height: auto;
+        border-top: 1px solid silver;
+        text-align: center;
+        padding: 5px;
+        /* display: none; */
+    }
+    #Picture{
+        width: 38%;
+    }
+
+    #Name{
+        width: 62%;
+        font-size: 19px;
+    }
+
+    #Price{
+        display: none;
+    }
+
+    #Quantity{
+        display: none;
+        width: 100%;
+    }
+    .Picture{
+        width: 90%;
+    }
+
+    #small-Remove{
+        /* margin-top: -30px; */
+        margin-bottom: 30px;
+    }
+
+    .cart{
+        height: auto;
+    }
+
+    #prepaid{
+        display: none;
+    }
+
+    #total{
+        width: 50%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 17px;
+    }
+
+    #checkout{
+        width: 50%;
+        font-size: 14px;
+    }
+
+    
+    .checkout{
+        display: none;
+        width: 100%;
+        margin-left: 0%;
+        position: fixed;
+        bottom: 0px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    #link{
+        float: right;
+    }
+}
+
+/* #Remove{
+    float: left;
+    width: 20%;
+    height: 100%;
+     border-right: 1px solid rgb(182, 175, 175);
+    background-color: blue;
+} */    
