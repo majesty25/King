@@ -827,12 +827,12 @@ video{
   font-family: calibri;
   float: left;
   margin-left: 5px;
-  font-size: 16px
+  font-size: 7px;
 }
 #price{
   color: rgb(255, 0, 0);
   float: left;
-  font-size: 16px;
+  font-size: 11px;
   font-weight: bold;
   margin-left: 5px;
   
@@ -842,14 +842,14 @@ video{
   margin-left: 5px;
   text-decoration: line-through;
   color: gray;
-  font-size: 14px;
+  font-size: 8px;
 }
 #PercentOff{
   color: white;
   background-color: rgb(197, 27, 69);
   float: right;
   margin-right: 10px;
-  font-size: 13px;
+  font-size: 10px;
   padding: 6px;  
   border-radius: 3px;
 }
