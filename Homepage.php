@@ -333,10 +333,10 @@ $res = $conn->query($sql1);
 
     </header>
 
-    <div id="Bottom_Nav">
+    <div id="Bottom_Nav" >
         <form action="Homepage.php" method="post">
             <button type="submit" id="fa-home"><i class='fa fa-home'></i><br>
-                <div class="nav-name">Home</div>
+                <div class="nav-name" style="font-size: 13px; font-family: calibri">Home</div>
             </button>
         </form>
         <form action="viewCart.php" method="post">
@@ -355,12 +355,12 @@ $res = $conn->query($sql1);
                     ?>
 
                 </sup><br>
-                <div class="nav-name">Carts</div>
+                <div class="nav-name" style="font-size: 13px; font-family: calibri">Carts</div>
             </button>
         </form>
         <form>
             <button id="fa-chat"><i class='fab fa-rocketchat'></i><br>
-                <div class="nav-name">Live chat</div>
+                <div class="nav-name" style="font-size: 13px; font-family: calibri">Live chat</div>
             </button>
         </form>
 
@@ -372,7 +372,7 @@ $res = $conn->query($sql1);
 
 
         <button id="fa-user" onclick="openAccount()"><i class='far fa-user'></i><br>
-            <div class="nav-name">User</div>
+            <div class="nav-name" style="font-size: 13px; font-family: calibri">User</div>
         </button>
 
 
