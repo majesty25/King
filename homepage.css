@@ -841,6 +841,7 @@ video{
 }
 
 #name{
+  font-family: candara;
   float: left;
   margin-left: 5px;
   font-size: 16px
