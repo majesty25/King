@@ -610,7 +610,7 @@ $res = $conn->query($sql1);
 
                             </button>
                             <br>
-                            <div id="NAME">
+                            <div id="NAME" style="font-family: candara;">
                                 <?php echo (substr($row["Item_name"], 0, 15)); ?>...
                             </div>
                             <br>
