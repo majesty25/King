@@ -174,6 +174,24 @@ img {vertical-align: middle;}
   background-color: #717171;
 }
 
+/* Fading animation */
+/* .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+} */
+
 
 
 /* On smaller screens, decrease text size */
@@ -245,7 +263,6 @@ img {vertical-align: middle;}
 
 /* Float four columns side by side */
 .column {
-    font-family: calibri;
   background-color: rgb(248, 248, 255);
   text-align: left;
   float: left;
@@ -824,15 +841,14 @@ video{
 }
 
 #name{
-  font-family: calibri;
   float: left;
   margin-left: 5px;
-  font-size: 7px;
+  font-size: 16px
 }
 #price{
   color: rgb(255, 0, 0);
   float: left;
-  font-size: 11px;
+  font-size: 18px;
   font-weight: bold;
   margin-left: 5px;
   
@@ -842,14 +858,14 @@ video{
   margin-left: 5px;
   text-decoration: line-through;
   color: gray;
-  font-size: 8px;
+  font-size: 14px;
 }
 #PercentOff{
   color: white;
   background-color: rgb(197, 27, 69);
   float: right;
   margin-right: 10px;
-  font-size: 10px;
+  font-size: 13px;
   padding: 6px;  
   border-radius: 3px;
 }
