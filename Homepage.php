@@ -614,14 +614,14 @@ $res = $conn->query($sql1);
                                 <?php echo (substr($row["Item_name"], 0, 15)); ?>...
                             </div>
                             <br>
-                            <div id="price">
+                            <div id="price" style="font-family: candara;">
                                 GH₵ <?php echo ($row["Item_new_price"]); ?>.00
                             </div>
                             <br>
-                            <div id="oldPrice">
+                            <div id="oldPrice" style="font-family: candara;">
                                 GH₵ <?php echo ($old_price); ?>.00
                             </div>
-                            <div id="PercentOff">
+                            <div id="PercentOff" style="font-family: candara;">
                                 -<?php echo ($row["Item_percent_off"]); ?>%
                             </div>
                             <br>
@@ -634,7 +634,7 @@ $res = $conn->query($sql1);
                                 } ?>
 
                             </div>
-                            <div id="rate">
+                            <div id="rate" style="font-family: candara;">
                                 (<?php echo ($row["Rate"]); ?>)
                             </div>
                             <br>
@@ -691,14 +691,14 @@ $res = $conn->query($sql1);
                         <?php echo (substr($row1["Item_name"], 0, 15)); ?>...
                     </div>
                     <br>
-                    <div id="price">
+                    <div id="price" style="font-family: candara;">
                         GH₵ <?php echo ($row1["Item_new_price"]); ?>.00
                     </div>
                     <br>
-                    <div id="oldPrice">
+                    <div id="oldPrice" style="font-family: candara;">
                         GH₵ <?php echo ($old_price); ?>.00
                     </div>
-                    <div id="PercentOff">
+                    <div id="PercentOff" style="font-family: candara;">
                         -<?php echo ($row1["Item_percent_off"]); ?>%
                     </div>
                     <br>
@@ -711,7 +711,7 @@ $res = $conn->query($sql1);
                         } ?>
 
                     </div>
-                    <div id="rate">
+                    <div id="rate" style="font-family: candara;">
                         (<?php echo ($row1["Rate"]); ?>)
                     </div>
                     <br>
