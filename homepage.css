@@ -245,6 +245,7 @@ img {vertical-align: middle;}
 
 /* Float four columns side by side */
 .column {
+    font-family: calibri;
   background-color: rgb(248, 248, 255);
   text-align: left;
   float: left;
