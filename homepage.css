@@ -2,7 +2,7 @@ body{
     margin: 0px;
     /* padding-bottom: 40px; */
     background-color: rgb(20, 148, 187, 0.1);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* background-image: url(font/gradient-summer-sale-banner-with-photo_23-2148942890.jpg); */
 
 }
@@ -57,9 +57,6 @@ header{
 }
 
 
-* {
-  box-sizing: border-box;
-}
 
 .space{
   width: 100%;
@@ -405,7 +402,7 @@ video{
   margin-top: 10px;
   color: black;
   text-align: center;
-  font-size: 23px;
+  font-size: 16px;
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* font-size: 26px; */
@@ -841,9 +838,11 @@ video{
 }
 
 #name{
+  font-size:16px;
+  font-family:calibri, candara, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   float: left;
   margin-left: 5px;
-  font-size: 16px
+  /* font-size: 16px */
 }
 #price{
   color: rgb(255, 0, 0);
@@ -1234,7 +1233,8 @@ sup{
     margin-bottom: 0px;
     margin-left: 1%;
     margin-top: 13px;
-/*     box-shadow: 1px 3px 4px gray; */
+    /* border: 1px solid silver; */
+    /* box-shadow: 1px 3px 4px gray; */
     /* height: 250px; */
   }
   #row{
