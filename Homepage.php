@@ -239,7 +239,7 @@ $res = $conn->query($sql1);
 
         <form autocomplete="off" action="">
             <div class="autocomplete">
-                <input id="myInput" type="text" name="myCountry" placeholder="What are you looking for?">
+                <input id="myInput" type="text" name="myCountry" placeholder="What are you looking for?" style="font-family: candara;">
             </div>
             <input id="search-submit" type="submit" value="Search">
         </form>
