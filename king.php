@@ -170,9 +170,9 @@ $result = $conn->query($sql);
 
         <form autocomplete="off" action="/action_page.php">
             <div class="autocomplete">
-                <input id="myInput" type="text" name="myCountry" placeholder="What are you looking for?">
+                <input style="font-family: candara" id="myInput" type="text" name="myCountry" placeholder="I'm searching for">
             </div>
-            <input id="search-submit" type="submit" value="Search">
+            <input id="search-submit" type="submit" value="Search" style="font-family: candara">
         </form>
 
 
