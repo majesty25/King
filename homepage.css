@@ -214,18 +214,22 @@ img {vertical-align: middle;}
         }
 
         #myInput {
+          height: 40px;
             background-color: #e6e6e6;
             width: 100%;
-             border-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            /* border-radius: 5px; */
         }
 
         #search-submit {
-            background-color: rgb(243, 6, 86);
-            color: #fff;
+          height: 40px;
+            background-color: #e6e6e6;
+            color: gray;
             cursor: pointer;
-            margin-left: 10px;
-            box-shadow: 1px 2px 4px rgb(199, 181, 181);
-            border-radius: 5px;
+            margin-left: 0px;
+            /* box-shadow: 1px 2px 4px rgb(199, 181, 181); */
+            border-radius: 0px;
         }
 
         .autocomplete-items {
@@ -837,9 +841,9 @@ video{
   /* border-bottom-right-radius: 30px; */
 }
 
-#NAME{
+#name{
   font-size:14px;
-  font-family:candara, calibri, Cambria, Cochin, Georgia;
+  font-family:candara, calibri, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   float: left;
   margin-left: 5px;
   /* font-size: 16px */
@@ -847,7 +851,7 @@ video{
 #price{
   color: rgb(255, 0, 0);
   float: left;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   margin-left: 5px;
   
@@ -1153,7 +1157,7 @@ sup{
 
   
   #search-submit{
-    margin-left: 5px;
+    margin-left: -1px;
   }
 
   .autocomplete{
