@@ -9,7 +9,7 @@ if (!isset($_POST['login'])) {
 
     $first_name = $_SESSION['first_name'];
     $last_name = $_SESSION['last_name'];
-    $index1 = $_SESSION['index'];
+    $index = $_SESSION['index'];
     // $index1 = $_SESSION['index'];
     // echo($Id);
 } else {
@@ -19,7 +19,7 @@ if (!isset($_POST['login'])) {
 
     $first_name = "";
     $last_name = "";
-    $index1 = "";
+    $index = "";
 }
 include('config.php');
 
@@ -170,26 +170,65 @@ $res = $conn->query($sql1);
             </div>
 
 
-            <div class="topnav">
-                <a href="#home" class="active" onclick="myFunct()">Logo</a>
-                <div id="myLinks">
-                    <a href="#news">News</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#about">About</a>
+            <form action="category.php" method="post">
+                <div class="topnav">
+                    <button name="fassion" href="#home" class="active0" onclick="myFunctI()">Fassion</button>
+                    <div id="myLinks0">
+                        <button class="sub-cat" href="#news">Men</button>
+                        <button class="sub-cat" href="#news">Women</button>
+                        <button class="sub-cat" href="#news">Boys</button>
+                        <button class="sub-cat" href="#news">Girls</button>
+                    </div>
+
                 </div>
-                <a href="javascript:void(0);" class="icon" onclick="myFunct()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
+
+                <div class="topnav">
+                    <button name="computers" href="#home" class="active0" onclick="myFunctII()">Computers</button>
+                </div>
+
+                <div class="topnav">
+                    <button name="cosmetics" href="#home" class="active0" onclick="myFunctIII()">Cosmetics</button>
+                </div>
+
+                <div class="topnav">
+                    <button name="food" href="#home" class="active0" onclick="myFunctIII()">Super market</button>
+                </div>
+
+                <div class="topnav">
+                    <button name="phones" href="#home" class="active0" onclick="myFunctIII()">Phones and Accessories</button>
+                </div>
+
+                <div class="topnav">
+                    <button name="home" href="#home" class="active0" onclick="myFunctIII()">Home and office</button>
+                </div>
+            </form>
 
 
             <script>
-                function myFunct() {
-                    var x = document.getElementById("myLinks");
+                function myFunctI() {
+                    var x = document.getElementById("myLinks0");
                     if (x.style.display === "block") {
                         x.style.display = "none";
                     } else {
                         x.style.display = "block";
+                    }
+                }
+
+                function myFunctII() {
+                    var y = document.getElementById("myLinks1");
+                    if (y.style.display === "block") {
+                        y.style.display = "none";
+                    } else {
+                        y.style.display = "block";
+                    }
+                }
+
+                function myFunctIII() {
+                    var z = document.getElementById("myLinks2");
+                    if (z.style.display === "block") {
+                        z.style.display = "none";
+                    } else {
+                        z.style.display = "block";
                     }
                 }
             </script>
@@ -232,14 +271,14 @@ $res = $conn->query($sql1);
 
 
         <div>
-            <a href="Homepage.php"><img id="logo" src="https://i.imgur.com/1OJp6hB.png" alt="" srcset=""></a>
+            <a href="Homepage.php"><img id="logo" src="font/Jaymall2.png" alt="" srcset=""></a>
         </div>
         <!-- <div id="searchLargeScreen"> -->
 
 
         <form autocomplete="off" action="">
             <div class="autocomplete">
-                <input id="myInput" type="text" name="myCountry" placeholder="I'm searching for" style="font-family: candara;">
+                <input id="myInput" type="text" name="myCountry" placeholder="I'm searching for?">
             </div>
             <input id="search-submit" type="submit" value="Search">
         </form>
@@ -265,7 +304,7 @@ $res = $conn->query($sql1);
                         $user = "SELECT * FROM user where Email = '{$Email}' AND Password = '{$Pword}'";
                         $User = $conn->query($user);
                         if (!$User == "") {
-                            while ($Customer = $User->fetch_assoc()) {                                
+                            while ($Customer = $User->fetch_assoc()) {
                                 $first_name = $Customer['First_name'];
                                 $last_name = $Customer['Last_name'];
                                 $email = $Customer['Email'];
@@ -314,7 +353,7 @@ $res = $conn->query($sql1);
             <button id="fa-btn" type="submit" name="viewcart"><i class="fas fa-cart-plus"></i> <sup>
 
                     <?php
-                    $total = "SELECT count(Price) as price FROM carts WHERE (User_id = '{$index1}')";
+                    $total = "SELECT count(Price) as price FROM carts WHERE (User_id = '{$index}') || (User_id = '{$index}')";
                     $Totals = $conn->query($total);
                     if ($Totals->num_rows > 0) {
                         while ($Fetch = $Totals->fetch_assoc()) {
@@ -333,17 +372,17 @@ $res = $conn->query($sql1);
 
     </header>
 
-    <div id="Bottom_Nav" >
+    <div id="Bottom_Nav">
         <form action="Homepage.php" method="post">
             <button type="submit" id="fa-home"><i class='fa fa-home'></i><br>
-                <div class="nav-name" style="font-size: 13px; font-family: calibri">Home</div>
+                <div class="nav-name">Home</div>
             </button>
         </form>
         <form action="viewCart.php" method="post">
             <button id="fa-cart-plus" name="viewcart"><i class='fas fa-cart-plus'></i><sup>
 
                     <?php
-                    $total = "SELECT count(Price) as price FROM carts WHERE (User_id = '{$index1}')";
+                    $total = "SELECT count(Price) as price FROM carts WHERE (User_id = '{$index}')";
                     $Totals = $conn->query($total);
                     if ($Totals->num_rows > 0) {
                         while ($Fetch = $Totals->fetch_assoc()) {
@@ -355,12 +394,12 @@ $res = $conn->query($sql1);
                     ?>
 
                 </sup><br>
-                <div class="nav-name" style="font-size: 13px; font-family: calibri">Carts</div>
+                <div class="nav-name">Carts</div>
             </button>
         </form>
         <form>
             <button id="fa-chat"><i class='fab fa-rocketchat'></i><br>
-                <div class="nav-name" style="font-size: 13px; font-family: calibri">Live chat</div>
+                <div class="nav-name">Live chat</div>
             </button>
         </form>
 
@@ -372,7 +411,7 @@ $res = $conn->query($sql1);
 
 
         <button id="fa-user" onclick="openAccount()"><i class='far fa-user'></i><br>
-            <div class="nav-name" style="font-size: 13px; font-family: calibri">User</div>
+            <div class="nav-name">User</div>
         </button>
 
 
@@ -388,7 +427,7 @@ $res = $conn->query($sql1);
                 <div id="UserInfo">
                     <div id="userHead"><?php echo ("Hi, " . $first_name . " " . $last_name); ?>
                         <!-- <?php echo ($email); ?> -->
-                        <h3>Welcome to Unique</h3>
+                        <h3>Welcome to Jaymall</h3>
 
                     </div>
 
@@ -423,13 +462,19 @@ $res = $conn->query($sql1);
 
                 <div class="mySlides fade">
                     <!-- <div class="numbertext">1 / 3</div> -->
-                    <img src="font/b.jpg" style="width:100%; border-radius: 7px">
+                    <img src="font/hugs + kisses (1).png" style="width:100%; border-radius: 7px">
+                    <!-- <div class="text">Caption Text</div> -->
+                </div>
+
+                <div class="mySlides fade">
+                    <!-- <div class="numbertext">1 / 3</div> -->
+                    <img src="font/hugs + kisses.png" style="width:100%; border-radius: 7px">
                     <!-- <div class="text">Caption Text</div> -->
                 </div>
 
                 <div class="mySlides fade">
                     <!-- <div class="numbertext">2 / 3</div> -->
-                    <img src="font/new3-removebg-preview.png" style="width:100%; border-radius: 7px">
+                    <img src="font/b.jpg" style="width:100%; border-radius: 7px">
                     <!-- <div class="text"></div> -->
                 </div>
 
@@ -443,6 +488,7 @@ $res = $conn->query($sql1);
 
 
             <div style="text-align:center">
+                <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
@@ -468,10 +514,10 @@ $res = $conn->query($sql1);
                     <button name="fassion" onmouseout="hideFassionSub()" id="category_list" type="submit"><i class='fas fa-tshirt'></i> Fassion</button>
                     <!-- <button name="fassion" onmouseout="hideFassionSub()" id="category_list" type="submit"><i class='fas fa-tshirt'></i> Women's Fassion</button> -->
                     <button name="computers" id="category_list" type="submit"><i class='fas fa-desktop'></i> Computers</button>
-                    <button name="electronics" id="category_list" type="submit"><i class='fas fa-bolt'></i> Cosmetics</button>
-                    <button name="electronics" id="category_list" type="submit"><i class='fas fa-bolt'></i> Super market</button>
-                    <button name="food" id="category_list" type="submit"><i class='fas fa-utensils'></i> Phones</button>
-                    <button id="category_list" type="submit"><i class='fas fa-eye'></i> Home & office</button>
+                    <button name="cosmetics" id="category_list" type="submit"><i class='fas fa-bolt'></i> Cosmetics</button>
+                    <button name="food" id="category_list" type="submit"><i class='fas fa-bolt'></i> Super market</button>
+                    <button name="pnones" id="category_list" type="submit"><i class='fas fa-utensils'></i> Phones</button>
+                    <button name="home" id="category_list" type="submit"><i class='fas fa-eye'></i> Home & office</button>
                 </form>
                 <!-- <li>hllo world</li> -->
             </ol>
@@ -482,11 +528,11 @@ $res = $conn->query($sql1);
         <div id="slide2">
 
             <div class="" style="max-width: 100%; height: 10px">
-                <img class="mySlides1 w3-animate-top" src="font/back.jpg" style="width:100%; min-height: 340px">
-                <img class="mySlides1 w3-animate-bottom" src="font/b.JPG" style="width:100%; min-height: 340px">
-                <img class=" mySlides1 w3-animate-top" src="font/Desk---2021-04-26T042930.976.JPG" style="width:100%; min-height: 340px">
-                <img class=" mySlides1 w3-animate-top" src="font/online-shopping-horizontal-banner-template_23-2148944455.jpg" style="width:100%; min-height: 340px">
-                <img class=" mySlides1 w3-animate-top" src="font/sales-banner-origami-style_23-2148396985.jpg" style="width:100%; min-height: 340px">
+                <img class="mySlides1 w3-animate-top" src="font/majesty1.png" style="width:100%; min-height: 340px">
+                <img class="mySlides1 w3-animate-bottom" src="font/hugs + kisses (1).png" style="width:100%; min-height: 340px">
+                <img class=" mySlides1 w3-animate-top" src="font/hugs + kisses.png" style="width:100%; min-height: 340px">
+                <img class=" mySlides1 w3-animate-top" src="font/social-media-sales-banner-template_220290-14.jpg" style="width:100%; min-height: 340px">
+                <img class=" mySlides1 w3-animate-top" src="font/majesty0.gif" style="width:100%; min-height: 340px">
                 <!-- <img class=" mySlides1 w3-animate-bottom" src="img_rr_04.jpg" style="width:100%"> -->
             </div>
 
@@ -526,7 +572,7 @@ $res = $conn->query($sql1);
 
 
 
-                <h4>Welcome to Unique</h4>
+                <h4>Welcome to Jaymall</h4>
                 <button id="round"><i id="round1" class="fa fa-shopping-bag "></i>
                     <h4>Hot sale</h4>
                 </button>
@@ -600,28 +646,28 @@ $res = $conn->query($sql1);
 
 
         ?>
-                <div style="back-ground-color: white;">
+                <div style="background-color: white;">
 
                     <form action="detail.php" method="POST">
                         <div class="column">
 
                             <button type="submit" id="pic" name="<?php echo ($row["Index_Num"]); ?>">
-                                <img id="imgm" src="<?php echo ($row["Item_image_name"]); ?>" alt="" srcset="">
+                                <img id="imgm" src="font/<?php echo ($row["Item_image_name"]); ?>" alt="" srcset="">
 
                             </button>
                             <br>
-                            <div id="NAME" style="font-family: candara;">
+                            <div id="name">
                                 <?php echo (substr($row["Item_name"], 0, 15)); ?>...
                             </div>
                             <br>
-                            <div id="price" style="font-family: candara;">
+                            <div id="price">
                                 GH₵ <?php echo ($row["Item_new_price"]); ?>.00
                             </div>
                             <br>
-                            <div id="oldPrice" style="font-family: candara;">
+                            <div id="oldPrice">
                                 GH₵ <?php echo ($old_price); ?>.00
                             </div>
-                            <div id="PercentOff" style="font-family: candara;">
+                            <div id="PercentOff">
                                 -<?php echo ($row["Item_percent_off"]); ?>%
                             </div>
                             <br>
@@ -634,7 +680,7 @@ $res = $conn->query($sql1);
                                 } ?>
 
                             </div>
-                            <div id="rate" style="font-family: candara;">
+                            <div id="rate">
                                 (<?php echo ($row["Rate"]); ?>)
                             </div>
                             <br>
@@ -658,81 +704,91 @@ $res = $conn->query($sql1);
         </form>
         <p>
 
-            <img src="font/realistic-3d-super-sale-background_52683-62854.jpg" alt="" id="i" srcset="">
-            <img src="font/pretty-young-stylish-sexy-woman-pink-luxury-dress-summer-fashion-trend-chic-style-sunglasses-blue-studio-background-shopping-holding-paper-bags-talking-mobile-phone-shopaholic_285396-2957.jpg" alt="" id="j" srcset="">
+    </div>
 
 
 
-            <?php
+    <div id="row1">
+
+        <img src="font/majesty1.png" alt="" id="i" srcset="">
+        <img src="font/majesty1.gif" alt="" id="j" srcset="">
+    </div>
+
+    <div id="row2">
+
+        <?php
 
 
-            if ($res->num_rows > 0) {
-                // output data of each row
-                while ($row1 = $res->fetch_assoc()) {
-                    $y = ($row1["Item_percent_off"] / 100) * $row1["Item_new_price"];
-                    $old_price = round(($row1["Item_new_price"] + $y), 0);
+        if ($res->num_rows > 0) {
+            // output data of each row
+            while ($row1 = $res->fetch_assoc()) {
+                $y = ($row1["Item_percent_off"] / 100) * $row1["Item_new_price"];
+                $old_price = round(($row1["Item_new_price"] + $y), 0);
 
-                    // $ID = $row1['Item_id'];
-                    // echo($ID);
+                // $ID = $row1['Item_id'];
+                // echo($ID);
 
 
-            ?>
-        <div style="back-ground-color: white;">
+        ?>
 
-            <form action="detail.php" method="POST">
-                <div class="column">
 
-                    <button type="submit" id="pic" name="<?php echo ($row1["Index_Num"]); ?>">
-                        <img id="imgm" src="<?php echo ($row1["Item_image_name"]); ?>" alt="" srcset="">
 
-                    </button>
-                    <br>
-                    <div id="name" style="font-family: candara;">
-                        <?php echo (substr($row1["Item_name"], 0, 15)); ?>...
-                    </div>
-                    <br>
-                    <div id="price" style="font-family: candara;">
-                        GH₵ <?php echo ($row1["Item_new_price"]); ?>.00
-                    </div>
-                    <br>
-                    <div id="oldPrice" style="font-family: candara;">
-                        GH₵ <?php echo ($old_price); ?>.00
-                    </div>
-                    <div id="PercentOff" style="font-family: candara;">
-                        -<?php echo ($row1["Item_percent_off"]); ?>%
-                    </div>
-                    <br>
-                    <div id="star">
-                        <?php for ($i = 1; $i <= $row1["Starf_Num"]; $i++) {
-                            echo ("&starf;");
-                        }
-                        for ($i = 1; $i <= $row1["Star_Num"]; $i++) {
-                            echo ("&star;");
-                        } ?>
+                <div style="background-color: white;">
 
-                    </div>
-                    <div id="rate" style="font-family: candara;">
-                        (<?php echo ($row1["Rate"]); ?>)
-                    </div>
-                    <br>
-                    <div>
-                        <button id="ADD">ADD TO CART</button>
-                    </div>
+                    <form action="detail.php" method="POST">
+                        <div class="column">
 
+                            <button type="submit" id="pic" name="<?php echo ($row1["Index_Num"]); ?>">
+                                <img id="imgm" src="<?php echo ($row1["Item_image_name"]); ?>" alt="" srcset="">
+
+                            </button>
+                            <br>
+                            <div id="name">
+                                <?php echo (substr($row1["Item_name"], 0, 15)); ?>...
+                            </div>
+                            <br>
+                            <div id="price">
+                                GH₵ <?php echo ($row1["Item_new_price"]); ?>.00
+                            </div>
+                            <br>
+                            <div id="oldPrice">
+                                GH₵ <?php echo ($old_price); ?>.00
+                            </div>
+                            <div id="PercentOff">
+                                -<?php echo ($row1["Item_percent_off"]); ?>%
+                            </div>
+                            <br>
+                            <div id="star">
+                                <?php for ($i = 1; $i <= $row1["Starf_Num"]; $i++) {
+                                    echo ("&starf;");
+                                }
+                                for ($i = 1; $i <= $row1["Star_Num"]; $i++) {
+                                    echo ("&star;");
+                                } ?>
+
+                            </div>
+                            <div id="rate">
+                                (<?php echo ($row1["Rate"]); ?>)
+                            </div>
+                            <br>
+                            <div>
+                                <button id="ADD">ADD TO CART</button>
+                            </div>
+
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
 
-<?php
+        <?php
 
 
-                }
-            } else {
-                echo "0 results";
             }
-            // $conn->close();
-?>
-</form>
+        } else {
+            echo "0 results";
+        }
+        // $conn->close();
+        ?>
+        </form>
 
 
     </div>
@@ -742,3 +798,7 @@ $res = $conn->query($sql1);
 </html>
 
 <script src="javascript.js"></script>
+<?php
+include("footer.html");
+
+?>
